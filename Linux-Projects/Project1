@@ -1,0 +1,10 @@
+project 1
+========
+1. AWS Accounts are created for all team members 
+2. Create a redhat8 linux server 
+3. Connect to the redhat8 server using mobaXterm/terminal ssh-cleint 
+4. Program or configure the server for password authentication   
+5. Create a user call dominion and assign a password [admin123] 
+6. Connect to your server using dominion's user
+7. Run commands in the server as dominion's user
+

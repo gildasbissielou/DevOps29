@@ -1,0 +1,35 @@
+#Installing Pre-requisite software's (SSH Tools and FTP tools)
+#Created an AWS account.
+#Created EC2 Instances in AWS (Redhat demo and Amazon linux)
+Understand linux command line.
+# mkdir 
+# ls
+# cd
+# pwd
+# rmdir 
+# touch
+# cat
+# head
+# tail
+# more
+# less
+# sort
+# tr
+# service
+# uptime
+# last
+# ps
+# kill
+# top
+# sar
+# userdel
+# groupdel 
+# crontab
+# ssh
+# Scp
+# ssh-keygen
+# watch
+# cat/etc/passwd
+# netstat
+
+
