@@ -1,0 +1,677 @@
+
+What is a Computers 
+  Computers have 2 components  = Hardware + Software
+     Hardware: CPU, Screen, keyboard, mouse, harddrive, RAM, Cards   
+     software: OS = Operating system, applications    
+
+Types of Computers:  
+  Personal Computers: Desktop, Laptop, IPADs, Tablets, Phones, etc. 
+  work Computers: Workstations, Servers (super computers)   
+
+Types Operating systems running in computers:
+    Linux OS []
+       Majority of Workstations, Servers (super computers)  
+    Windows OS []
+       Majority of Workstations, Laptops, Desktop
+    Solaris OS []
+    IOS []
+    Androids []
+
+Can I computer have more than ONE OS at once?? 99% 
+
+What determines the choice of an OS:
+Common OS are Windows, MacOS, Linux and Solaris
+  -- COST  
+         $400 for a windows OS licence 
+         $350 for a Solaris OS licence 
+         00$ for a Linux OS licence 
+  -- security
+       Virus attack   --- Windows  
+       No Virus attack--- Linux   
+  -- usage 
+       Personal use [Windows]  
+       Business [Linux]
+  -- quality  
+  -- version 
+  -- speed  
+  -- looks 
+  -- prestige 
+  -- durability 
+
+90:10 [Linux:Windows]  
+
+How are tasks runned/executed on computers???
+How are tasks runned/executed on computers???
+
+We are leveraging computing serviceS from AWS and GCP
+ Linux OS = 
+   Is an Open source OS = Free + code 
+
+ Linus was a student who converted a problem to a business
+ Solaris wasn't an open source = paid for 
+ Create a free Account in AWS =  
+
+Computer Vendors:
+  Dell, HP, Lenovo, Toshiba, Apple
+      A Dell Laptop with a windows OS is a Windows Computer  
+      An HP Desktop with a Linux OS is a Linux Computer 
+      An LG Desktop with a Linux OS is a Linux Computer 
+
+Car Vendors:
+  Toyota, Tesla, Ford, Honda
+
+Linus was using a Solaris computer for his project.
+   -- Encounter a problem running his project  
+   -- He contacted the vendor but the response delayed     
+
+Linus created the Linux OS from Solaris kernel []:
+
+Linux is an open source OS with multiple destributions/versions.
+Windows, Solaris, MacOS, etc are licenced OS.
+Softwares can be:
+  1. open source [Free with its source code]  
+     open source softwares has more community support
+
+  2. Free [free but without the source code(recipe)] 
+  3. licenced [paid for]  
+
+IQ: Explain your experience in Open SOURCE TECHNOLOGY?? Linux, 
+
+IQ: How to execute tasks/workloads in Linux servers:
+IQ: How to execute tasks/workloads on your computers:
+     1. GUI = Graphical User Interface  = 60k
+            -- This is generally a method manual to run tasks
+     2. CLI = Command Line Interface =    90k
+            -- This introduces tasks automation   
+     3. Scripts = Are generally a collection of commands = 180k 
+           -- amplifies tasks automation 
+
+ I have windows Laptop with default Folders [Directories]    
+   Folders [MY PC, document, downlaods, music, pictures, Desktop]
+
+Tasks:
+  Create 10 sub-Folders in your music folder of your windows Laptop  
+  Create 10 folders using commands in your Linux Server  
+====
+How and where I can buy and use Linux servers:
+
+What is needed to drive from Houston to Dallas??
+     Car [Buy, Hired/Rent, Taxi] 
+We shall rent/buy computing serviceS from a Cloud Provider like:
+   AWS = amazon web serviceS
+   GCP 
+   AZURE
+  This will be ultra-fast 
+
+
+     https://aws.amazon.com/ 
+Amazon is the parent company of AWS 
+    amazon.com 
+    aws.amazon.com
+
+We use write and deliver letters:
+  ups, dhl  
+  email   
+
+ Create a free Account in AWS =  
+    https://aws.amazon.com/ 
+
+Create and Login into your AWS Account:
+  userName  
+  password
+Create a virtual server [EC2] in YOUR AWS ACCOUNT/Cloud. 
+
+3. Connect to your Linux server running in AWS using:
+    1. ssh-client software [provide a passage]
+         mobaXterm, puTTY, gitBash
+         Download an install mobaXterm ssh-client software
+    2. identification = userName  
+    3. authentication = password or an SSH_KEY   
+    4. AUTHORISATION = what you do in the server  
+       Tasks that a user is AUTHORISE to execute  
+
+AWS 90%:
+   Admin[mobaXterm]  ---- > EC2-Linux 
+
+GCP 10%:
+
+How to find help quickly??
+ 1. Post problems in the Class29 Solution Group - wait for 10minutes  
+ 2. Forward/escalate the ticket to the help-desk  
+ 3. Contact class Admins [Ann/Ayafor/Serene/]
+ 4. Go through the video again
+
+Time to spend on a ticket/problem:
+  1. 2hours max
+  2. 21 DAYS 
+  3. Continue to the with the video(s) 
+      minutes 45 ---- 90mintes   
+
+1. Class29 DevOps Group  or Class29b = Telegram
+2. Help-Desk = Telegram
+3. Whatsapp Group [Class29 & class29b]
+4. Class29 Solution Group []  
+5. Teams
+Landmark TECHNOLOGY
+Class29 is Landmark 2023 Deployment:
+what made me successful?? = 
+  1. Who am I 
+  2. Where I'm my from
+  3. Why I'm I here   
+  4. What can I do    
+  5. Where I'm my going = what is my destination
+     Life without a purpose is the greatest strategy in life  
+     success is designed by God to be predictable  
+     success is not luck/an experiment   
+
+ssh -i "class29key.pem" ec2-user@ec2-184-169-191-86.us-west-1.compute.amazonaws.com  
+
+ssh -i class29key.pem ec2-user@184.169.191.86   
+
+input          ---- output   
+ Land 
+ Labour 
+ Capital 
+ Entrepreneur 
+
+Vorizon  
+vodafone 
+
+MTN  :
+  $5B      ---   $10B  
+Web economy ---  
+Facebook   --- 50  == 5b downlaods   
+Amazon   
+Web economy ---  
+Developers and Automation Engineers [DevOps Engineers ] 
+--- Banking/Finance - FinTech applications 
+--- Health &  
+--- Elon Musk   
+
+Enterprise/super computers: Servers 
+Work Experience :
+--- Windows Servers  OS 
+--- Linux Servers  OS
+
+Setup a private computer lab wither servers to study course 
+
+SERVER --- 8000GB MEMORY   256000gb 
+Laptop --- 64GB   MEMORY/4TB of Hardrive      
+phones --- 12GB   MEMORY/512 gb of Hardrive      
+
+File:
+  files   
+  folders=Directory
+    Folders or Directories is/are containers of 
+      files and sub folders/sub Directories 
+  sub-folders
+
+
+Windows File Structure:
+root/main/parent Directory:
+  This is the principal Directory where 
+  other Directories are created from
+ The root Directory for windows is:
+    c://  
+    C:\Users\LandmarkTechnologies\Documents
+    "C:\Users\LandmarkTechnologies\Downloads"
+    "C:\Users\LandmarkTechnologies\Music"
+    "C:\Users\LandmarkTechnologies\Documents\class29"
+ user: simon  
+    "C:\Users\Simon\Downloads"
+
+Linux File Structure:
+=====================
+ What is the root Directory for Winows: c://       
+ What is the root Directory for Linux: 
+       / 
+  Public Ip-address/RemoteHost address = 13.52.74.182  
+  userName: ec2-user  
+  sshKey: class29key.pem 
+  ssh = secure shell = 
+    use ssh protocol to securely connect to a Linux server    
+
+    ssh -i class29key.pem ec2-user@13.52.74.182 
+    ssh -i "class29key.pem" ec2-user@ec2-13-52-74-182.us-west-1.compute.amazonaws.com
+        = using sshKey to authenticate   
+    ssh ec2-user@13.52.74.182   
+        = using password to authenticate   
+
+
+Linux File Structure:
+=====================
+   Linux file Structure start with the root Directory [/]
+  
+home Dir = Users 
+================
+   Create user account for 5 team members 
+   ec2-user 
+   dominion  
+   simon 
+   mercy 
+   keren 
+
+bin = contains of binary files[commands] 
+=========================================
+ - ls = list the contant of a Directory [files/sub-directoriers]
+ - touch = create an empty file  
+ - cd    = change Directory
+ - cat   = display file content
+ - pwd   = print working Directory
+
+sbin = system/super bin
+========================
+ - adduser simon
+ - passwd simon
+What is the difference between bin and sbin in Linux? 
+ sbin are binary flies only executable by the root user or users 
+   with admin/elevated priviledges 
+ bin files are executable by any user 
+
+userName = root is the administrator, super user with unlimited access 
+root user is created when launching a Linux server  
+
+ GUI / CLI / Scripts   
+
+etc = configuration files
+======================== 
+- /etc/passwd 
+- /etc/shadow 
+- /etc/ssh/sshd_config 
+- /etc/cron.allow  
+
+tmp - temporal file holder 
+=========================
+
+opt = installation of packages
+===============================
+ - maven 
+ - tommcat 
+ - nexu
+
+
+lib  = 
+====
+
+proc 
+=======
+-  meminfo 
+-  cpuinfo 
+
+var
+====
+  /var/logs/messages 
+=======================
+The root is    '/'
+        ls /
+
+      ls /bin 
+      ls /sbin 
+      ls /tmp 
+      ls /opt 
+      ls /var
+      ls /lib 
+      ls /etc 
+
+[ec2-user@ip-172-31-12-29 ~]$ ls /
+bin   dev  home  lib64  mnt  proc  run   srv  tmp  var
+boot  etc  lib   media  opt  root  sbin  sys  usr
+
+GUI =  
+CLI = COMMANDS
+
+Basic Linux ommands:
+=====================
+  mkdir  = create directory     
+  ls = list fil and directories 
+  mkdir class29
+  mkdir devops
+  mkdir dirName  
+  mkdir -v test 
+    - v = verbose mode  
+mkdir class/class27/class28/class29b
+mkdir -pv class/class27/class28/class29b
+      -p = Create both parent and child dir
+
+[ec2-user@demo ~]$   mkdir class/class27/class28/class29b
+mkdir: cannot create directory ‘class/class27/class28/class29b’
+: No such file or directory
+
+Ticket 001:
+  Create the project dir in the below order
+     DevOps/aws/git/Linux/maven/nexus
+  mkdir -vp DevOps/aws/git/Linux/maven/nexus
+
+hostname  
+sudo hostname demo  
+sudo su - ec2-user 
+hostname
+
+Linux is case sensitive  = 
+   test / Test / TEST 
+      are different files in Linux
+
+  ls  LS Ls lS 
+[ec2-user@demo ~]$ tree
+-bash: tree: command not found  
+
+Yum is a package manager for Redhat Linux 
+ yum install tree
+
+ Error: This command has to be run with
+        superuser privileges
+        (under the root user on most systems). 
+ 
+  users classes:
+    Normal users 
+    root / superuser / admin 
+    system users
+       jenkins 
+
+How can you run a command as another user?
+ sudo permit a user to run commands as another user  
+whoami:
+ ec2-user
+
+simon 
+  sudo -u simon  yum install tree
+paul 
+  sudo -u paul  yum install tree
+root  
+  sudo -u root  yum install tree 
+  sudo yum install tree
+
+[ec2-user@demo ~]$ tree
+.
+├── class
+│   └── class27
+│       └── class28
+│           └── class29b
+├── class29
+├── devops
+├── DevOps
+│   └── aws
+│       └── git
+│           └── Linux
+│               └── maven
+│                   └── nexus
+├── test
+├── Test
+└── TEST
+
+mkdir 
+
+rmdir = it is use to delete empty directories
+rmdir Test/ TEST/
+
+[ec2-user@demo ~]$ rmdir class
+rmdir: failed to remove 'class': 
+       Directory not empty
+mkdir use to create directories 
+
+rm -r = use to delete any directories
+        delete directories with/without content 
+rmdir -v devops/
+rmdir: removing directory, 'devops/'
+commands in Linux are in lower case 
+
+========================
+ ls = List directory's content
+ ls = List the content of pwd    
+ ls / = List the content of the root dir  
+ ls /home/
+ ls /home/ec2-user
+ pwd =
+
+ touch = create a file  
+ ll or ls -l = Long list the directory's content
+ ls -lt 
+ ls -ltr
+ ls -la 
+ ls -ltra
+ Hidden files 
+     = are files that start with a "."
+       touch .config  
+
+cd 
+===
+  Change directory
+  Directory navigation 
+
+  [ec2-user@demo nexus]$ pwd
+/home/ec2-user/DevOps/aws/git/Linux/maven/nexus
+cd /home/ec2-user/DevOps/aws/
+cd - [takes you to your last dir]    
+cd ../../../../ 
+cd = moves user to his homeDir 
+
+user's homeDir:
+  /home/ec2-user
+  /home/simon 
+  /home/dominion
+
+ root user's homeDir:
+    /
+File/Directory MGT Commands
+===========================
+- Creating/modifying a file:
+  touch 
+  echo
+  echo I will be rich in 2022 > app.js 
+  echo "In Jesus Name" >> app.js
+  vi 
+  vi is a Text editors:
+  sublime    
+  bracket   
+  nodepad++ 
+  vscode     
+  vi or vim is use to create and/or modify files :
+
+    vi app.js
+    When you 'vi or vim' into a file you are in command mode.
+    Enter insert mode to start modifying
+
+    1. Type 'i' to enter insert mode 
+       This will permit modification 
+
+    2. After editing the file enter command mode
+       Type esc key to enter command mode 
+
+    3. Type ':wq!' or ':wq' and press enter to save and quit
+         press 'shift and do zz'
+
+    4. Type esc key to enter command mode  
+       Type " :q! " and press enter to quit without saving
+
+ cat deploy.sh  
+
+- searching files 
+    find  
+    find -f app.js 
+
+- reading/displaying a file  
+    cat 
+      cat  /etc/passwd  
+    head 
+      head /etc/passwd
+      head node.29
+      head -5 notes.29 
+      head -1 notes.29    
+    tail   
+      tail /etc/passwd
+      tail node.29
+      tail -5 notes.29 
+      tail -1 notes.29 
+
+- extracting sections/patterns from a file
+    grep 
+       grep -i simon list
+       grep simon list
+    sort   
+    pipe = | 
+      cat list | grep -i simon | sort  
+
+      --------------------
+   src ******************* 
+      --------------------
+    cut  
+    awk   
+       sn:    name  ID    ServerIP   
+       001    Paul  DS25  10.0.0.25
+       008    James ds11  10.0.0.36
+       0087   Erica DS21  10.0.0.52    
+
+- deleting a file:
+    rm  
+cp : It will copy file contents of one file to another file.
+mv : It will move or rename a file/dir
+file : Determine file type.
+wc : Counts the number of lines, words, bytes, or characters in a  file.
+    wc fileName 
+    wc -l 
+    wc -w 
+    wc -c 
+
+ln: It will create the link between file
+    It is use to create links of files 
+    Links helps admins to easily gain access into a file   
+
+  soft links: short cut to the file 
+    ln -s  deploy.sh deploy-sl.sh 
+  hard links: Is a copy of the file    
+    ln  deploy.sh deploy-bk.sh  
+    cp  deploy.sh  deploy-bk.sh  
+
+    deploy.sh  
+Explain the difference b/w soft and hard links:
+1      2          3      4         5      6        7             8
+type  permissions links owner    group   size   date/time      fileName
+
+d     rwxrwxr-x.   2    ec2-user ec2-user  6    Jul 23 16:11    class
+-     rw-rw-r--.   1    ec2-user ec2-user 45    Jul 20 00:08    deploy.sh
+l     rwxrwxrwx.   1    ec2-user ec2-user  9    Jul 23 16:15    deploy-sl -> deploy.sh
+-     rw-rw-r--.   2    ec2-user ec2-user 45    Jul 20 00:08    deploy-bk.sh
+
+locate: locate fileName
+        locate deploy.sh 
+
+find: find /home/ec2-user/dev -name deploy.sh 
+      find / -name deploy.sh  = searches from the root dir  
+      find /tmp -name deploy.sh 
+      sudo find /tmp -name deploy.sh 
+      find . -name deploy.sh = It will search the deploy.sh 
+                               file under current directory [pwd]
+
+Permissions: 
+  Permissions are used to determine who can access a file and   
+  what they can do with the file. Generally we have the following interest 
+  groups:
+    owner  
+    Group  
+    others   
+Developers  
+DevOps Engineers  
+Group = DevOps
+dominion 
+  touch test   
+ec2-user  
+
+d     rwxrwxr-x.   2    ec2-user ec2-user  6    Jul 23 16:11    class
+-     rw-rw-r--.   1    ec2-user ec2-user  45    Jul 20 00:08    deploy.sh
+-     rw-rw-r--.   1    dominion devops    45    Jul 20 00:08    test 
+
+-     rw-    rw-    r--  . 1 ec2-user ec2-user  0 Jul 23 16:42 test 
+      owner  group  others 
+      6      6       4   =664
+d     rwx    rwx    r-x. 2 ec2-user ec2-user  6 Jul 23 16:11 class
+      7      7      5    = 775
+
+Normal users have 664 and 775 default permissions for files and directories 
+respectively
+
+root user's have 644 and 755 default permissions for files and directories 
+respectively
+
+  su - = will permit to switch to the root user's account  
+  sudo su -   
+  sudo -i   
+    [ec2-user@demo29 dev]$ sudo -i
+    [root@ip-172-31-12-29 ~]#
+   owner group others
+-  rw-   r--    r--. 1 root root 0 Jul 23 16:51 app
+    6     4      4  = 644
+d  rwx   r-x    r-x. 2 root root 6 Jul 23 16:51 dev
+   7     5      5   = 755
+
+
+  file              directory :
+  read    = 4      
+  write   = 2
+  execute = 1   
+
+umask = It is use to set permissions for files/dir at creation  
+
+       NormalUser          rootUser
+        file    dir       file    dir    
+full    0666    0777      0666    0777
+Default 0664    0775      0644    0755
+        -----   -----     -----   ----
+umask   0002    0002      0022    0022
+        ----    ----      -----   ----
+                
+What is the default umask value for the root user and NormalUser??
+Because of 0022 umask value for the rootUser, files created by the 
+root user will inherit 0644 permissions
+
+Since the mask value for NormalUsers is 0002, files created by the 
+normal users will inherit 0664 permissions.  
+
+Set the umask value if all files should inherit 0666 permissions?
+   umask 0000   
+   -rw-rw-rw- = 666. 1 ec2-user ec2-user  0 Jul 23 17:10 file.js
+Set the umask value if all files should inherit 0600 permissions?
+   umask 0066 
+    - rw- --- --- 
+    - rw- --- ---. 1 ec2-user ec2-user  0 Jul 23 17:13 file2
+
+       NormalUser         
+        file   NewFile  newFile2       
+full    0666   0666      0666   
+Default 0664   0666      0600 
+        -----  ------    -------     
+umask   0002   0000      0066  
+        ----   -----     ------   
+
+owner  rw = 6  rwx=7 
+group  rw = 6  rwx=7
+others rw = 6  rwx=7
+
+IQ: How can set the permissions of new files/dir?? 
+  By changing the umask value.
+
+IQ: What is the default umask value for:
+      1: NormalUser  = umask is 0002
+      2. rootUser    = umask is 0022
+
+
+IQ: How can you change/modify the permissions of an existing file/dir ??
+  By using the chmod  command.  
+    chmod 600 fileName   
+    chmod 600 deploy 
+
+  useradd simon  
+  groupadd devops   
+
+   sudo useradd simon  
+   sudo groupadd devops 
+
+   sudo chown simon app.sh
+   sudo chgrp devops app.sh 
+
+   sudo chown simon:devops deploy  
+
+   sudo chown -R simon:devops dev  
+     This change ownership recursively
+       to both parent and child directories 
+
+
