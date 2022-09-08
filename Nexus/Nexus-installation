@@ -1,0 +1,512 @@
+Multi-tier application deployment:
+                Frontend-tier                  Backend-Tier
+               LB/webServer-Tier    appServers-Tier        db-tier
+  users---------> webServer/LB ----->appServers---------->Databases
+
+Software testing:
+  Unit testing
+  Functional 
+  Regression 
+  Perfromance 
+  Penetration 
+sonarqube:
+   git/GitHub  
+   src Codes  -- 10,000 lines of code  
+   JUnit Tests Cases 4,000 unit test cases  
+   buildScript-pom.xml 
+   javaProjects 
+  mvn package:  
+      1. validate
+      2. compiles 
+      3. testing [unit testing] = passed
+      4. packages  
+src = 10,000L  
+Junit = 4,000L  
+CODE COVERAGE = 4K/10K*100% = 40% 
+
+sonarqube/Benchmarking:
+comparing actual results against the benchnark/standards
+1. How many unit test cases were runned?
+   How many test cases should have being runned? 
+
+2. Is our code readable with ease? 
+    ----> code smells 
+
+3. Is our code portable [environment independent]?
+    -- if not code smells / hard coding 
+
+4. Are the vulnerabilities in the code ?
+    ---> if they are then --- 
+       password -- any 4 characters    
+Benchmark/standards for a quality Software/application:
+1. Code coverage should be greater than 85%  
+2. Dublicate lines should be less than 5% 
+3. There should be no vulnerabilities in the code [pw=1234] 
+4. Code smells should be less than 5  
+
+Code Quality expectations:
+• Duplicated code
+• Coding standards
+• Unit tests
+• Complex code
+• Comments
+• Potential Bugs
+• Architecture & Design
+
+SonarQube:
+  1. sonarqube Scanner: 
+  2. sonarqube server :
+       Compute engine 
+       database 
+       search engine - elasticsearch
+       web-server
+Databases:
+  1. mySQL = RDS  
+  Data is written in tables format (rows and columns)
+  SQL is a langague use to qwery  RDS.   :
+    Oracle
+    mySQL  - OS
+    PostgreSql  - OS
+    MSSQL (MicrosoftSQL)
+    DB2
+    Sybase
+    MySQL, Oracle, Microsoft SQL Server, PostgreSQL
+     USES ROWS AND columns  
+  Excel / Word / Access
+
+    SN     NAME      DOB
+   1001  Paul        11-May
+   1002  Dominion    20-Sep
+   1003  Landmark    30-Jun
+   1004  Simon       21-Apr
+   1005  Mercy       22-Oct
+ 
+ 2. noSQL = nonRDS   
+ UnStructured data:
+  JSON format:
+  {
+    id: 1245
+    name: 'James' 
+  }
+ {
+    SN: 6644
+    name: 'Olu'
+  }
+  {
+    DOB: 05/30/1992
+    Lastname: 'Laura'
+  }
+Examples:
+    MongoDB
+    Cassandra
+    CouchDB, 
+    CouchBase, 
+    HBase, 
+    Redis, 
+    Riak, 
+    Neo4J are the popular NoSQL databases.
+---
+Installation:
+  https://docs.sonarqube.org/latest/requirements/requirements/
+  https://www.sonarqube.org/downloads/
+54.176.76.14:9000 
+
+SonarQube Home directory = :
+What is the sonarqube home directory?
+  This is where the sonarqube Software is extracted = /opt/sonarqube
+       wget anb unzip 
+    /opt/sonarqube?  
+   /opt/sonarqube
+   /app/sonarqube
+SonarQube directory Structure:
+  bin [ sonar.sh] 
+    sh sonar.sh start | stop | restart | status
+    sh  sonar.sh start 
+             is a switch case bash shell script
+    sh /opt/sonarqube/bin/linux-x86-64/sonar.sh [start | stop | restart | status]
+  conf [sonar.properties] 
+  COPYING  
+  data  
+  elasticsearch  
+  extensions  
+  lib  
+  logs  
+  temp  
+  web
+SonarQube has:
+ 
+ Free version  :
+  Java,  = 30,000 lines 
+  JavaScript,
+  C#, 
+  TypeScript,
+  Kotlin,
+  Ruby, Go, Scala, Flex, Python, PHP, HTML, CSS, XML and 
+  VB.NET
+
+  Java, C#, JavaScript, TypeScript, 
+  CloudFormation, Terraform, Kotlin, Ruby,
+  Go, Scala, Flex, Python,
+  PHP, HTML, CSS, XML and VB.NET
+
+sonarQube:
+  privateIP = >http://35.154.242.68:
+  publicIP  = 54.176.76.14
+
+sudo timedatectl set-timezone America/New_York
+
+https://github.com/LandmakTechnology/maven-web-application
+
+1. Developers commit/push  
+2. Test + Build 
+    mvn package 
+3. CodeQuality analysis with SonarQube:
+    mvn sonar:sonar    
+       goal = Sonar  
+       plugin = sonal
+
+[ERROR] SonarQube server [http:3.22.166.76:9000] can not be reached
+mvn sonar:sonar  
+        <properties>
+                <jdk.version>1.8</jdk.version>
+                <spring.version>5.1.2.RELEASE</spring.version>
+                <junit.version>4.11</junit.version>
+                <log4j.version>1.2.17</log4j.version>
+                <sonar.host.url>http:172.31.22.207:9000/</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>admin</sonar.password>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        </properties>
+
+ANALYSIS SUCCESSFUL, 
+  you can browse http://172.31.22.207:9000/dashboard?id=com.mt%3Amaven-web-application
+
+Coverage on New Code                 is less than  80.0%
+Duplicated Lines on New Code         is greater than 3.0%
+Maintainability Rating on New Code   is worse than A
+Reliability Rating on New Code       is worse than A
+Security Rating on New Code          is worse than A
+
+dev
+
+IP address = 54.176.76.14 
+PortNumber = 9000
+url:  54.176.76.14:9000  
+     http://54.176.76.14:9000  
+     https://4.176.76.14:9000  
+
+  userName  = admin
+  password  = admin   
+
+How can you check if sonarqube is working?
+
+sh /opt/sonarqube/bin/linux-x86-64/sonar.sh [start | stop | restart | status]
+1. sh /opt/sonarqube/bin/linux-x86-64/sonar.sh status  
+2. ps -ef | grep sonarqube
+3. http://54.176.76.14:9000    
+4. curl 54.176.76.14:9000  
+   curl localhost:9000   
+5. 
+
+IQ: Explain a problem you faced recently in your project??? 
+Problem = sonarqube server not starting  
+ANALYSE = checking logs [logs/sonar.log] 
+  An unauthorised attempted to start sonarqube service  
+  starting sonarqube as the root user  
+
+ sonarqube Scanner and sonarqubeServer [db, web-server, CE, ES ]
+
+50 Tesla java applications/projects:  
+===================================
+
+mvn clean package sonar:sonar
+
+Load project settings for component key: 'com.mt:maven-web-application'
+[INFO] Load project settings for component key: 'com.mt:maven-web-application' (done) | time=403ms
+[INFO] Load quality profiles
+[INFO] Load quality profiles
+
+[INFO] Quality profile for java: Sonar way
+[INFO] Quality profile for jsp:  Sonar way
+[INFO] Quality profile for xml:  Sonar way
+
+SonarQube Reports depends on:
+
+1. Rules  
+2. Quality profile
+3. Quality Gates  
+Quality Profiles are collections of rules to apply during an analysis.
+For each language there is a default profile
+
+mvn sonar:sonar \
+  -Dsonar.projectKey=teslaQP \
+  -Dsonar.host.url=http://54.176.76.14:9000 \
+  -Dsonar.login=6be23527b65b135ffa00aed657eb72047d75ccd6
+
+Quality gates  
+
+
+Security of the sonarqube server
+===============================
+create users  
+grand admin access 
+create groups  
+use tokens over password
+   0c09ad87dff4bdc74fa2dc80d0e4651e4f45caaa
+
+
+        <properties>
+                <jdk.version>1.8</jdk.version>
+                <spring.version>5.1.2.RELEASE</spring.version>
+                <junit.version>4.11</junit.version>
+                <log4j.version>1.2.17</log4j.version>
+                <sonar.host.url>http:172.31.22.207:9000/</sonar.host.url>
+                <sonar.login>0c09ad87dff4bdc74fa2dc80d0e4651e4f45caaa</sonar.login>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        </properties>
+
+
+        <properties>
+                <jdk.version>1.8</jdk.version>
+                <spring.version>5.1.2.RELEASE</spring.version>
+                <junit.version>4.11</junit.version>
+                <log4j.version>1.2.17</log4j.version>
+                <sonar.host.url>http:172.31.22.207:9000/</sonar.host.url>
+                <sonar.login>admin</sonar.login>
+                <sonar.password>admin</sonar.password>
+                <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+                <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        </properties>
+
+
+
+
+SonarCloud = SaaS  
+SonarQube  = IaaS  
+
+
+
+We maintain a in Fault tolerant Architecture / Infrastructure:
+Deploying a Highly available Architecture / Infrastructure:
+  Upload Artifacts into:
+    Nexus/
+    JFrog 
+    AWScodeArtifact jar/war/ear
+
+Coding: 
+  Git for versioning 
+  GitHub/GitLab/Bitbucket as a SCM tool 
+
+Build: 
+  maven create artifacts (deployable packages 
+    that deployment(Tomcat/JBoss) servers can interprets )
+  Runs JUnitTest cases written by developers 
+
+Lifecycle:
+    1.  clean Lifecycle 
+       mvn clean  --- delete old artifacts
+    2.  site/swagger Lifecycle
+       site --- Create java classes 
+
+    3.  default Lifecycle
+        mvn validate 
+        mvn compile 
+        mvn test 
+        mvn package (target/*war, app.war. app.jar, app.ear)
+        mvn install 
+            (target/*war, app.war. app.jar, app.ear)
+            (MHD/*war, app.war. app.jar, app.ear)
+
+        mvn sonar:sonar 
+            sonar = plugin
+            sonar = goal
+
+        mvn deploy = Uploads artifacts to Nexus 
+
+mvn package  
+  Artifacts = 1: 
+    maven = jar, war or ear 
+
+mvn deploy
+  Artifacts = 2: 
+    maven = jar, war or ear 
+    nexus = jar, war or ear 
+
+What can be done if the packages are deleted IN MAVEN?
+What can be done if the packages can't be access because the build server is down?
+
+Disaster management:
+  We need to create backups for artifacts in artifactories
+
+Coding:
+  Local computers (Laptops) 
+  What will happened if a developers laptop or env't breakdowns 
+  developers commits changes in code in their local Repository 
+  developers push their commits to the remote Repository in GitHub
+
+Artifactory Repository:
+  maven Repository   [jar/war/ear]
+  yum Repository     [yum packages] 
+  NodeJs Repository  [node packages] 
+  apt Repository     [apt packages]
+
+artifacts depends on the project and language:
+  java   --> app.jar, maven-web-app.war, boa.ear 
+  docker -->   Docker Image 
+               docker build
+               docker run 
+  NodeJs  -- > NPM Packages
+  yum --- > yum Packages  =  
+            yum install maven git httpd tree
+            yum is a package manager for Redhat and CentOS  
+  
+       yum install maven
+
+  apt  -->  apt install tree 
+            apt is a package manager for Ubuntu/Debian
+
+  chocolatey --> choco install terraform 
+             --> chocolatey is a package manager for windows OS  
+
+  brew:     brew install terraform    
+         --> brew is a package manager for mac OS  
+  helm-->  is a package manager for kubernetes
+
+  pip --> is a is a package manager for python 
+
+-----
+IQ: How do you use Nexus in your environment?
+
+Nexus: Is an Open source Artifactory Repository
+       It is used to store and retrieve build artifacts
+       We can retrieve artifacts when needed
+       Nexus acts as a Disaster recovery server for maven    
+
+JFrog: Is an  Artifactory Repository - Licence
+       It is used to store and retrieve build artifacts 
+
+Amazon CodeArtifacts:
+     It is used to store and retrieve build artifacts 
+
+We support Java based application dev't.
+
+maven goals:
+ mvn package  
+    Creates artifacts in the target directory
+ mvn install 
+   Creates and store artifacts in maven-local-repo & target directory
+
+ what is the difference between target and /target dir?? :
+    target is a normal   
+    /target is a root directory
+
+    app is a normal          = mkdir app   
+    /app is a root directory = mkdir /app 
+    mkdir 
+
+ what is the difference between mkdir dirName and sudo mkdir /dirName  
+   mkdir app [this create app dir in your PWD] 
+   mkdir /app [this create app dir in your the root dir]  
+
+mvn deploy: uploads the build artifacts to maven remote repository (nexus)
+    - validate
+    - compile
+    - test
+    - create package in target directory
+    - Packages created in mavenlocalrepo   
+    - uploads THE PACKAGE to Nexus (Maven remote-repo)
+
+IQ: How do your developers connect with your SCM repos in GitHub?
+ via authentication: ssh or PAT 
+  git push alaisName branchName  
+
+IQ: How DOES MAVEN connect with SonarQube?
+    MODIFY THE   <properties> <properties/> in pom.xml  
+    by adding sonarqube server IPaddress and login credentials 
+
+
+How will MAVEN connect with nexus?
+maven and nexus intergration: 
+
+nexus Installation:
+-------------
+ https://www.sonatype.com/download-oss-sonatype
+
+PUBLIC-IP = 52.53.227.31  
+privateIP = 172.31.27.43
+
+ echo  'run_as_user="nexus" ' >> /opt/nexus/bin/nexus.rc
+ echo  'run_as_user="nexus" ' > /opt/nexus/bin/nexus.rc
+
+http://52.53.227.31:8081/  
+  userName = admin 
+  password=admin123
+
+Nexus Home directory:
+  /opt/nexus 
+    bin  = binary files   
+    lib  = 
+    etc  = configuration files  
+     cat nexus/etc/nexus-default.properties   
+     application-port=8081
+     application-host=0.0.0.0
+     nexus-context-path=/
+
+     application-port=8191
+     application-host=0.0.0.0
+     nexus-context-path=/landmark
+
+  /opt/sonatype-work  
+
+http://52.53.227.31:8081/ 
+http://52.53.227.31:8191/landmark   
+http://52.53.227.31:8191/landmark/
+Fintech:
+ 1. clone the code 
+ 2. maven clean package = build artifacts 
+ 3. codeQuality with sonarqube
+ 4. upload artifacts into Nexus 
+      Created a nexus server 
+      configure the serve  
+      Intergrating Maven with nexus 
+fintech client  
+Maven SonarQube Integration:  mvn sonar:sonar
+   54.236.232.85
+   172.31.0.41
+   PORT = 9000
+ 1. vi pom.xml and check for "properties" tag
+mvn package  
+Maven Nexus Integration:
+
+sonarqube vs sonacloud
+---->        
+Databases 
+  H2DB  
+  PostgreSql   
+Rules  
+
+11:45AM - 2:45PM 
+================
+  COMPLETING  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+L77 Faith Chi Tabukum - 150k + 
