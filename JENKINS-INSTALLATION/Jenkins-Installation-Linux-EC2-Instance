@@ -1,0 +1,11 @@
+#!bin/bash
+ sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+ yum install epel-release
+ yum install java-11-jdk-devel
+ yum install jenkins
+ service jenkins start
+ service jenkins status
+ chkconfig jenkins on
+ sudo service jenkins status
+
