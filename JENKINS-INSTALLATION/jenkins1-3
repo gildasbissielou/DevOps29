@@ -1,0 +1,590 @@
+Jenkins, is an open source Continuous Integration (ci/cd)
+tool written in Java. 
+
+Junkins can be installed in Multiple -Platforms :  
+  Linux
+    Hosted by AWS 
+  Windows
+    LOCAL system
+  MacOS-
+    LOCAL system
+  solaris
+
+ Explain you EXPERIENCE in open source Technologies?? 
+   Jenkins, maven, tomcat, sonarqube, nexus, Linux, git, github, Nginx  
+
+ HUDSON --> 2004 -- > Oracle
+ kubernetes 
+    2011 --> JENKINS Community --> Jenkins
+
+Jenkins:
+  Continuous Integration
+    Maven-web-app --> java  (fintech / e-commerce / NIH )
+      Code-->Git-->Maven(validates, compiles, tests, package)-->
+         
+    CODE--COMMITS--Git/github---Jenkins---Maven---sonarqube--nexus  
+
+              Target env't (Tomcat)
+Coding:
+ Current version:v44 [30,000  Lines]
+ Current version:v45 [ 1,000  Lines]
+
+    Continuous Delivery
+    Continuous Deployment
+
+Upstrean Jenkins jobs   --- CI Job [Build & Release]
+   Clone  
+   UnitTesting 
+   Build  
+   CodeQualityAnalysis
+   UploadArtifacts    
+Downstream Jenkins jobs --- CD Job 
+   Deploy app to UAT/Testing Environment 
+     + Testing [integration, regression, functional, penetration, performance, load, ]
+     + approval [auto/manual]  
+   Deploy to the Production Environment
+
+
+  CI Tool (Jenkins): ---> 
+      GitHub --> Maven --> SonarQube --> Nexus  --> CI 
+                   +
+                Testing *(automated)
+                   |=   Continuous Deployment
+                  Development to Production
+
+  CI Tool (Jenkins): ---> 
+      GitHub --> Maven --> SonarQube --> Nexus  --> CI 
+                   +
+                Testing *(manually)  (Testing/UAT)
+                   |=   Continuous DeLIVERY
+                  Development to Production
+
+  dev --> runs well in dev 
+
+  testing / staging
+     perform additional testing:
+        performance 
+        integration 
+        regression 
+        security - penetration 
+
+  UAT / Pre-prod 
+  Production
+
+Have you managed Continuous Delivery and Continuous Deployment projects??
+ YES:
+ Internal projects: In house  --> Continuous Deployment
+ 
+ External projects: Clients  ---> Continuous Delivery
+ 
+Nature of application:
+   We support critical applications for a FinTech/e-commerce 
+
+DevOps is all about automation   
+7Cs:
+   CD---> Continuous Development [Git/GitHub/IDEs /GitBranch/gitTag]
+   CI --> Continuous Integration [Git/GitHub/Jenkins/maven/sonarqube/nexus] 
+         [Build and Release Engineering]
+   CD --> Continuous Delivery [build=packages/artifacts-->testing/UAT--manualApproval--- prod]
+   CD --> Continuous Deployment [build=packages/artifacts-->testing/UAT--auto--- prod]
+   CM --> Continuous Monitoring
+            https://www.tesla.com/en_ca/powerwall  
+            https://www.tesla.com/en_ca/modelx
+   CS --> Continuous security
+   CT --> Continuous Testing 
+
+Jenkins installation:
+
+Which edition of jenkins have you used in Production??
+ Installation of Jenkins:  Community Edition (CE)
+ Jenkins CE  
+ Jenkins EE - CloudBees Jenkins  
+
+Jenkins.sh 
+==========
+#!/bin/bash
+# Author: Prof Legah
+# date: 25/08/2020
+# Installing Jenkins on RHEL 7/8, CentOS 7/8 or Amazon Linux OS
+# You can execute this script as user-data when launching your EC2 VM.
+sudo timedatectl set-timezone America/New_York
+sudo hostnamectl set-hostname jenkins
+# CREATE HOSTNAME
+sudo yum install wget -y
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum upgrade -y
+# Add required dependencies for the jenkins package
+sudo yum install java-11-openjdk -y
+sudo yum install jenkins -y
+sudo systemctl daemon-reload
+# start jenkins
+# Start Jenkins
+# You can enable the Jenkins service to start at boot with the command:
+sudo systemctl enable jenkins
+#You can start the Jenkins service with the command:=
+sudo systemctl start jenkins
+# You can check the status of the Jenkins service using the command:
+sudo systemctl status jenkins
+sudo su - ec2-user
+echo "echo of jenkins installation"
+
+==============
+1. Create a t2.meduim EC2 Instance/Server/VM in your cloud of choice [aws].
+         azure/ GCP / VMWare /   
+2. Install pre-requisit for jenkins (java-11-openjdk)
+3. Install Jenkins using bash-shell script 
+4. Start jenkins
+     sudo systemctl enable jenkins &&
+     sudo systemctl start jenkins   
+5. Verify if jenkins is running 
+      systemctl status jenkins
+      ps -ef | grep jankins
+      curl localhost:8080 
+      curl 13.52.240.58:8080   
+6. Access jenkins on the browser  
+      http://13.52.240.58:8080/
+    cat /var/lib/jenkins/secrets/initialAdminPassword 
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword   
+7. Install default and custom Jenkins Plugins  
+   Plugins extend Jenkins with additional features to support many different needs
+   and automate tasks.
+
+   http://13.52.240.58:8080/
+
+
+ Installation of CloudBees Jenkins: ENTERPRISE ENTERPRISE -EE
+
+13.52.240.58
+
+Tesla Client:
+  java web applications    
+  1. We have created and shared the project GitHub repo  with developers  
+     Developers commit/push code to the project repo in GitHub using Git branching strategy 
+  2. Jenkins GitHub Integration:
+   https://github.com/Landmark-Technologies/maven-web-application 
+
+   https://github.com/LandmakTechnology/maven-web-app
+         private repo:
+       AUTHENTICATION: 
+          username:legah2045
+          password:admin123 
+          token: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
+       Credentials: 
+
+  3. Run JUnit Testing and Build with Maven  
+    Jenkins maven Integration:  mvn package 
+     dashboard--manage Jenkins ---  Global Tool configuration --maven   
+     project -- java-web-app
+
+  4. Jenkins SonarQube Integration;  mvn sonar:sonar :
+----------------------------------------------  
+NB: Your SonarQube server must be running 
+    SonarQube service must be running 
+         sh /opt/sonarqube/bin/linux-x86-64/sonar.sh status
+          sh /opt/sonarqube/bin/linux-x86-64/sonar.sh start
+ 1. modify 'Properties' tag with SonarQube server details in  pom.xml
+    vi pom.xml:
+      http://172.31.22.207:9000/
+      http://54.176.76.14:9000/
+         username: admin 
+         password: admin 
+
+
+      <Property>
+        <sonar.host.url>http://172.31.27.227:9000/</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin</sonar.password>
+      </Property>
+  2. Open required ports in SonarQube server to allow traffic from jenkins server
+      port 9000 is open in the firewall/security group
+ 
+ or Install and configure JaCoCo plugin in Jenkins UI:
+
+Jenkins Nexus Integration;  mvn deploy:
+Upload build artifacts:
+--------------------------------------  
+1. Create repos in nexus-UI to upload aritifacts
+   http://52.53.227.31:8191/landmark/repository/tesla-fe-releases/ 
+   http://52.53.227.31:8191/landmark/repository/tesla-fe-snapshots/
+
+
+2. modify 'distributionManagement' tag with nexus repos details  in  pom.xml
+        vi pom.xml
+            <distributionManagement>
+
+  <distributionManagement>
+    
+      <repository>
+        <id>nexus</id>
+        <name>Landmark Technologies Releases Nexus Repository</name>
+        <url>http://52.53.227.31:8191/landmark/repository/tesla-fe-releases/</url> 
+      </repository>
+      
+      <snapshotRepository>
+        <id>nexus</id>
+        <name>Landmark Technologies Snapshot Nexus Repository </name>
+        <url>http://52.53.227.31:8191/landmark/repository/tesla-fe-snapshots/</url>
+      </snapshotRepository>
+  </distributionManagement>
+
+3. modify /maven/conf/setting.xml in maven (JENKINS) server with login credentials  
+=# vi /nexus/conf/setting.xml
+sudo vi  /var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/maven3.8.6/conf/settings.xml
+
+            <server>
+                <id>nexus</id>
+                <username>admin</username>
+                <password>admin123</password>
+            </server> 
+    4. Open required ports[8081] in Nexus server to allow traffic from jenkins server
+
+ JENKINS-TOMCAT INTEGRATION:
+============================= 
+1. INSTALL 'Deploy to container' Plugin on Jenkins UI
+   This plugin allows you to deploy a war to a container after a successful build. 
+
+2. ADD A TOMCAT USER in /tomcat9/conf/tomcat-users.xml 
+   sudo vi /tomcat9/conf/tomcat-users.xml
+   <user username="myLandmark" password="admin123" roles="manager-gui,admin-gui,manager-script"/>
+
+3. vi /opt/tomcat9/webapps/manager/META-INF/context.xml
+
+access application:
+     http://35.170.249.131:8080/myapps  
+==================
+
+Front desk == 
+African kitchen == 
+business == 
+
+Co-op 
+
+==========================================================
+tesla-webapp =  
+Onboard a new project for Tesla  tesla-app =  
+Create a Jenkins job to test, build and deploy the application to a tomcat server
+Requirements:
+  1. Create Team in our GitHub company a/c add and and assign member's roles and tasks
+  2. Create a github repository for the  project  
+  3. share the repository details for Team members and developers  
+  4. Install and configure:
+      jenkins for build and ci/cd 
+      SonarQube for CodeQualityAnalysis  
+      nexus for artifactory   
+      tomcat as appSever 
+      nginx as web server
+  6. Create a Jenkins job for the project  
+  7. configure Jenkins:
+        maven Integration  
+        SonarQube Integration  
+        nexus integration  
+        tomcat integration  
+        git Integration
+        GitHub  Integration
+        notification [slack, email]
+
+=================================================  
+1. project1 
+     https://github.com/LandmakTechnology/maven-web-app  
+
+2. https://github.com/LandmakTechnology/tesla-app
+
+   http://35.170.249.131:8080/tesla  
+
+ Jenkins slack or email notification
+ ===================================
+ Step 1) 
+   Install Email Extension Plugin as follows:
+     Manage Jenkins ---> Manage Plugins ---> Install “Email Extension Plugin “
+
+Step 2)
+    Add the smtp server host as follows.
+        smtp = simple mail transfer protocol 
+    Click on Manage Jenkins ---> Configure System --->
+       smtp.gmail.com
+       smtp ports: 25 
+                   465 587  
+
+Step 3: In Job configure Editable Email as follows.
+Select any Job, which we need to configure Email notification ---> Click on Configure ---> Select the
+Post-build Actions section.
+Click on Advanced Settings …
+It will expand and will show more settings and click on Add Trigger and select the Always.
+
+===========================================
+Build Now --- manual  
+
+landmark@gmail.com
+
+Automate builds using build triggers.
+=====================================
+1. build periodically = Timer [cronjob ] =   :
+     run this job every mid night [database backup]  
+     run this job every 2am [database backup] 
+   Started by timer
+
+2. poll SCM - Timer + Changes in SCM via   :
+     * * * * * Every minute Jenkins will check for changes in the src to trigger a build  
+     H * * * * Every hour Jenkins will check for changes in the src to trigger a build
+     Software builds 
+     application build and Deployment
+     Started by an SCM change
+
+3. Changes in SCM via GitHub-webhook 
+     GitHub will notify Jenkins to trigger a build once there is a change in the scm [src]  
+     
+    Jenkins Server url =  http://13.52.240.58:8080/
+    GitHub-webhook     =  http://13.52.240.58:8080/github-webhook/   
+
+     Software builds 
+     application build and Deployment
+     Started by GitHub push by legah2045 
+
+     api call  
+
+4. Build other projects  
+     Upstrean project  
+       1. build & release  
+
+       2. Downstream project 
+             deploy2Tomcat
+
+Started by user Landmark Technologies
+
+Tool stack 
+Technology stack:
+  Linux  
+  Windows  
+  maven 
+  Nexus  
+  SonarQube   
+  Bash scripting    
+  Git  
+  GitHub  
+  SonacLoud  
+  AWS cloud     
+  NGINX 
+  java  
+  Tomcat  
+
+Jenkins automation
+==================
+  In Jenkins we run automated tasks/jobs/projects/workloads
+Build triggers  :
+
+Types of Jenkins jobs:
+======================
+- Freestyle  project 
+- Maven project
+    - reduces the configurations to build with Maven    
+          mvn package  [ pom.xml, src]   
+          apple [ apple.xml, src]      
+- Pipeline projects  
+- Mulit-Branch Pipeline projects  
+
+Building in workspace /var/lib/jenkins/workspace/tesla-app
+
+Jenkins Home Directory = /var/lib/jenkins/
+Jenkins User = jenkins  
+su - jenkins  = run as a normal user  
+sudo su - jenkins  = run as the root user      
+
+mavenHomeDir = /opt/maven   
+JHD = /var/lib/jenkins/:
+  workspace  
+  jobs  
+  plugins/deploy.jpi 
+  credentials.xml
+
+Jenkins options:
+  1. Discard Old Build
+     Building in workspace /var/lib/jenkins/workspace/tesla-app
+
+  2. Disable this project
+          This project is currently disabled 
+      schedule Maintainance of servers 
+         Jenkins--Git/GitHub--Maven--sonarqube--nexus---tomcat 
+            H * * * * 
+      database backup 
+
+  3. Delete workspace before build starts 
+
+  4. Add timestamps to the Console Output 
+      sudo timedatectl set-timezone America/New_York
+
+  5. build with parameters  :
+
+
+Plugins Mgt  
+============
+ ---Plugins extends the functionality of jenkins, maven, etc.   
+
+PROJECTS: 
+  In LandmakTechnology I work in a Team where we:
+1. Develop, test, build, secure, deploy, manage & monitor web and 
+   enterprise applications for FinTech clients like;
+           Banks  [ boa, wf, barclays, rbc, td, bicec, uba, ecobank ] 
+           Insurance [BLI, WFG, TD, Sunlife, AIG  ] 
+           Money Transfer [zelle, cashApp, interact, MTN-MOMO,
+           payment gateways = VISA, MASTERCard, Paypal
+
+    2. We automate the entire process stated above:
+PROJECTS Requirements:
+    Git [git-bash]:
+        IDEs = Integrated Development Environments
+               simplifies the deployment process  
+        vscode, pycharm, eclipes, atom 
+
+    SCM=GitHub : 
+        Create PROJECT REPOSITORIES and/or organisation  
+        TEAMS with required/minimum permissions/access granted
+        Branching 
+    maven:   
+    SonarQube or SONARCLOUD /
+    Tomcat
+    NewRelic   
+    Docker  
+    kubernetes
+    ANsible  
+    terraform  
+
+    It is not recommended to run multiples services/applications in the same server  
+    because that can result to a single point of failure  
+
+We need an account in aws:
+ Create your infrastructures in aws: 
+    ec2 instances - servers / virtual manchines[VM]
+ -- NameTAGs are for easy identification   
+    EC2=VM - SonarQube = because we have the SonarQube software installed 
+    EC2=VM - Nexus     = because we have the nexus software installed 
+    EC2=VM - Tomcat    = because we have the tomcat software installed    
+    EC2=VM - Jenkins:  = because we have the jenkins software installed    
+
+  with terraform we create all required infrastructures/servers/ec2 in 1 command 
+  with Ansible we configure infrastructures/servers/ec2 
+
+terraform will create infrastructures/servers/vm/ec2= 
+   maven - sonarqube - nexus - ansible - tomcat - jenkins:  
+
+ansible will configure the entire infrastructures   
+
+Infrastructure Engineer:
+  With Jenkins we achieve:
+    Continuous integration     
+    terraform apply  
+
+Jenkins  / Ansible / terraform  / kubernetes  
+=============================================
+Plugins Management:
+Plugins Extends jenkins functions 
+• JACOCO = Java Code Coverage  
+• SSH 
+    Helps Jenkins to run commands remotely in other Linux servers
+• Publish Over SSH
+     Helps to transfer files from jenkins to other Linux servers 
+     Helps to transfer artifacts from jenkins into Linux servers 
+     Helps Jenkins to run commands remotely in other Linux servers  
+• SSH Agent
+    Helps to transfer artifacts from jenkins into Linux servers
+    Helps to connect Jenkins master to slaves/agents  
+        maven-web-app.war
+        TomcatServer -- EC2-Linux-RedHat-Instance 
+    Which protocol is used to copy files/dirs into a Linus server?? SSH 
+            /webapps  
+
+• Deploy to container  --- 
+    deploys applications in Tomcat/GlassFish/JBoss servers
+
+• Deploy WebLogic  
+     deploys applications in WebLogic servers
+
+• Maven Integration
+      spring-boot-mongo-1.0.jar 
+
+• Safe Restart
+    jobs are running 
+      sudo systemctl restart jenkins
+
+• Next Build Number
+     1, 2, 3, 4 
+     dev1, dev2, dev3 
+     uat1, uat2, uat3 
+     prod1, prod2, prod3
+
+• Build Name Setter
+
+• Email Extension
+
+• slack notification  
+
+• slack notification  
+
+• SonarQube Scanner   
+
+• Audit Trail Plugin
+         = 10 team members 
+        username=simon | pwd=admin123
+        username=percy | pwd=admin123
+        username=mercy | pwd=admin123
+        username=florence   
+        username=olu  
+• Schedule Build  
+• Artifactory Plugin
+• Cloud Foundry
+• Blue Ocean  
+• Publish Over SSH
+    jenkins --> ansible --deployment
+
+• ThinBackup
+
+• Convert To Pipeline
+
+• Job import plugin 
+  jenkins migration 
+    Jenkins server1 redhat6 
+    Jenkins server2 redhat8  
+    Jenkins server3 docker-container
+    decommissioning Jenkins Server
+
+• Maven projects  
+     25 mins 
+  freestyle projects
+     30 mins 
+
+SSH AGENT Plugin
+================
+Jenkins master slave/agent integration   
+100 Jenkins jobs  
+
+ ssh -i "class29key.pem" ubuntu@ec2-3-101-147-160.us-west-1.compute.amazonaws.com
+
+ ssh -i "class29key.pem" ec2-user@ec2-3-101-53-49.us-west-1.compute.amazonaws.com
+tcp  
+ sshKey    = class29key.pem
+ username  = ec2-user
+ AGENT1 ADDRESS   = 3.101.147.160  / 172.31.9.3  / ubuntu
+ agent2 address   = 3.101.53.49  / 172.31.13.70  / ec2-user
+
+ sudo yum install java-11-amazon-corretto-headless
+
+ 4:07:40 
+ Building in 
+     workspace /var/lib/jenkins/workspace/tesla-dev  
+ 14:42:53 Building remotely on agent1 in 
+          workspace /home/ubuntu/workspace/tesla-dev
+
+
+    8  sudo yum install java-11-amazon-corretto-headless
+    9  java -version
+   10  sudo yum remove java*
+   11  java -version
+   12  sudo yum install java-11-amazon-corretto-headless
+   13  history
+
+sonar:sonar  is broken  
+
+deploy  is deploy    
+
+deploy  
