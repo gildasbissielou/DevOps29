@@ -1,0 +1,133 @@
+AWS - 
+
+Tasks:
+  We develop - CODING 
+     build, 
+     test, 
+     monitor, 
+     secure, 
+     backup and 
+     deployment 
+  applications
+
+Platforms:   Platform Engineer ( Linux )
+             Multi- Platform Engineer (Linux/WINDOWS/Solaris/mcOS)
+
+Platform Engineer - Linux understands how to run tasks on Linux OS/Platform.
+Platform Engineer - WINDOWS understands how to run tasks on Windows OS/Platform.
+Multi- Platform Engineer understands how to run tasks on Multi- OS/Platforms  
+
+Jira is used for Ticketing and bug tracking:
+We work in an agile environment.
+Ticket: Install and configure Jenkins Server??? 10wd 
+  3. which platform do you want me to use?
+        --- Linux OS [70%]
+        --- WINDOWS  [20%]
+            others    [10%]
+
+Tesla: Install Jenkins on Windows & Solaris Platforms
+We can develop, build, test, monitor, secure, 
+    backup and deploy applications
+  development:
+    CODING === IDEs [vscode, Eclipse], [Pycharm, ]
+    versioning  === git, svn,   
+    SCM ===  [github, gitlab, bitBucket]
+
+  Testing: === [Selenium,] 
+  build: MAVEN/Gradle/ANt  [javaProjects]  
+  UNitTesting: JUNit 
+  SonarQube: CodeQuality Analysis [standards vs actual results ] 
+  Sonatype Nexus / JFrog: 
+  Jenkins: CI/CD automation 
+  Tomcat: 
+  webserver - nginx: users ---> nginx1/nginx2 ---> tomcat ----> database  
+  server monitoring / Applications performance monitoring: NewRelic      
+
+Linux is a secured Open source OS:
+1.  Linux -- Distributions 
+      Redhat -- Redhat (8,6,7)
+      CentOS -- 
+      UBUNTU
+      Alpine 
+      amazon LINUX 2/1
+  
+Managing Linux OS or running tasks on Linux Platforms: 
+  Run levels ---- 1, 2, 3, 4, 5, 6
+   Run level 5 Multi user:  
+      Graphical User Interface (GUI) - 
+      Commands- CLI 
+
+   Run level 3 - Multi user (CLI) : 
+    Commands- CLI :
+       Linux Commands 
+       Shell SCRIPTING 
+       ec2-user / simon / landmark
+
+   Run level 1 - Single user (CLI) :  9 years  IT experience  
+       troubleshooting servers using single-user mode 
+       changing the root password   
+            admin user = root        
+
+What have we use to access and run tasks on our Linux servers??
+   COMMANDS    = CLI 
+
+What are using to access and run tasks on your workstation?? GUI
+
+Workstation: Laptop / Desktop  
+Servers:   
+  mobaXterm === Helps you to connet to your server as an SSH-CLIENT      
+
+  Laptop (PC):  Run level 5 Multi user
+    CentOS (Linux)
+       bash / sh / csh /ksh /tsh /zch
+       touch class29
+    macOS 
+       zch
+    WINDOWS 
+
+2.  WINDOWS
+      Powershell
+      GitBash 
+Platform Engineer (Linux ):
+  creating servers (Virtual Machines in azure/aws/GCP cloud )
+  patching servers (yum remove / upgrade / update)
+    commissioning [Jenkins-2.360, openJDK11, git27 ] & 
+    decommissioning servers
+    recommissioning servers [Jenkins-2.370, openJDK16, git28.0.7 ]
+  securityMGT/usersMGT/fileMGT/packageMGT  
+  volume mgt - LVM (OS +  Storage + applications)
+=====================================================
+Infrastructure Engineering:
+Cloud Engineering/Computing:
+--- Requirements to run a Business
+       1. capital expenditures  
+       2. Factors of production [L,L,C,E]
+
+AWS:
+======
+on-prem Infrastructure  = we own and manage our Datacenters    
+Datacenter:
+  1. Applications
+  
+  2. Database-storage 
+  3. OS 
+  4. HardWare
+
+CAPEX  = CAPITAL EXPENDITURES
+OPEX   = OPERATING EXPENDITURES
+
+Netflix = 
+   bring cinema to your homes  
+   Movies producers --- 
+   aws [100TB CPU / 8TB RAM / 256Vcpus] 
+      s3 bucket   = 8 hours  
+   ec2 servers  = 2-3 minutes   [$2,000 USD]  
+Cloud Infrastructure:
+-- AWS  
+   GCP cloud    
+   AZURE 
+
+       USA --- 
+       China  --- 
+       Europe    
+
