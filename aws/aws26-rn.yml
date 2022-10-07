@@ -1,0 +1,424 @@
+Platforms:   Platform Engineer (Linux )
+             Multi- Platform Engineer (Linux/WINDOWS/Solaris)
+  LINUX
+      Redhat -- Redhat (8,6,7)
+      CentOS -- 
+      UBUNTU
+      amazon lINUX 2
+  Managing Linux OS:
+   Run level 5 Multi user
+      User Interface (GUI) - 
+      Commands- CLI 
+   Run level 3 - Multi user (CLI) 
+       Linux Commands 
+       Shell SCRIPTING 
+       ec2-user / simon / landmark
+   Run level 1 - Single user (CLI) 
+
+   Laptop (PC):  Run level 5 Multi user
+    CentOS (Linux)
+       bash / sh / csh /ksh /tsh /zch
+    macOS 
+       zch
+    WINDOWS 
+
+  WINDOWS
+      Powershell
+      GitBash 
+Platform Engineer (Linux ):
+  creating servers (vm in aws )
+  patching servers (yum remove / upgrade / update)
+  volume mgt (OS +     Storage + applications)
+              RedhatOS  ebs
+                        df -h 
+          LVM
+  users mgt / file mgt /   
+
+Building applications
+Coding:
+  Java  = 
+    src, build script, unit test cases  
+  Python
+
+  NodeJS
+  .NET
+  versioning -  Git 
+  SCM = GitHub / GitLab / BitBucket / CodeCommit 
+      
+  IDEs = Intergrated Development Environments
+          VS CODE
+          Eclipse
+          Atom
+          AWS Cloud9
+
+Build tools:
+  pyBuilder -- Python
+  MSBuild -- .NET
+  Maven, Gradle, ANt 
+    mvn package
+        validation = ok 
+        complitation = ok  (javac)
+        testing  = ok =passed  (Artifacts can be trusted)
+        packaging = ok
+
+Code Quality:  ok
+  SonarQube need a Server 
+  SonarCloud does not need a server
+    Code Coverage = 70% = 80%
+       src                10000 lines 
+       unit test cases    7000 test cases
+    code smells
+    bugs
+    vulnerabilities
+    duplicate lines
+
+  USPS     --->   mailBox
+  CanadaPost ---> mailBox
+  emails    ---> 
+=====
+  NewRelic ---> does not need a server
+  GitHub    ---> does not need a server
+Landmark Shareholders / Stake holders: 
+   Accountant 
+      P/L  = 400B $
+      BS   = 2TB
+   Auditor 
+      Express an opinion 
+
+Build and Release :
+ ci job completed :
+  Nexus / JFrog / 
+     maven remote repo 
+       pom.xml 
+         dependencies (openJDK) 
+         plugins (log4j, JUNIT, Selenium, )
+         mvn package 
+            localRepo -->
+            group-repo   
+              proxy-repo (Nexus)   ---- CentralRepo
+              remoteRepo (Nexus)   ---- CentralRepo
+     maven proxy repo 
+     maven group repo 
+Deploy  :
+  Tomcat (/webapps)
+  JBoss (deployment)
+Docker / k8s:
+  apiServer
+    cli = kubectl
+    UI = k8s dashboard
+
+DevOps E. Degree Master Class     :
+Class21 = 100%
+  Class22 = 120% Class21
+    Class23 = 140% Class21
+
+year = e-commerce 
+
+Year1   1000 customers =  20 servers
+Year2   2000 customers =  40 servers
+Year3   5000 customers =  100 servers
+Year4   2000 customers = 
+
+CAPEX  = CAPITAL EXPENDITURE
+
+OPEX   = OPERATING EXPENDITURE
+
+  IaaS 
+    ec2 
+  PaaS
+    EKS 
+  SaaS
+    CloudWatch 
+    SonarCloud 
+    NewRelic 
+    GitHub
+
+What to consider before creating resources in aws:
+What to consider before choosing a region in AWS:
+     Amazon EKS = Elastic Kubernetes Service 
+
+  $50
+
+
+sudo yum list 
+
+sudo yum list 
+on-demand: 
+Reserved:
+  Dedicated Host
+
+ec2 instances are virtula manchines:
+
+
+SPOT:
+  un use instances 
+
+  70% usage capacity
+
+  target 85% capacity  
+
+  30% spare capacity
+
+  15% goes for auction
+ 
+
+  $100,000
+
+    bidding for the spot instances 
+
+    Landmark $8,000
+    mtn  $12,000
+    boa $15,000 --->
+    Barclays $20,000
+
+    limited time () 
+
+
+Amazon Machine Image (AMI):
+    = os + softwares 
+  free-tier
+     OS only  
+  community
+     OS only  
+  marketPlace
+     OS + softwares (Splunk / wordPress / ) 
+  My AMIs/ golden AMI
+  packer 
+
+ACCESS THEIR ACCOUNTS 
+EFFECT TRANSACTIONS
+   INPUT / OUTPUT SHOULD BE HIGH PERFORMANCE  
+
+Security group configuration:
+ open PORT22 OPEN FROM:
+     99.233.53.63/32   myIP
+     172.10.10.1/16    from myVPC
+     0.0.0.0/0, ::/0   anywhere
+
+ open PORT 80  FROM:
+
+    99.233.53.63/32   myWebServer / LB 
+
+ users --> myWebServer --> (80)appServer  --->  (3306)database 
+
+ users  ------------------->  (80)appServer 
+
+ users  --------------------------------------------> (3306)database
+
+ Name: Jenkins_TD 
+ private IP: 172.31.83.154 
+ PUBLIC ip: 54.166.36.16
+            3.91.145.162
+
+ ssh -i "demo26.pem" ec2-user@ec2-3-91-145-162.compute-1.amazonaws.com
+
+ ssh -i demo26.pem ec2-user@3.91.145.162
+
+ When we stop and start an instance the PUBLIC changes
+
+ How can we prevent the PUBLIC ip from changing 
+    by using Elastic ip.
+
+ When we stop and start an instance the PUBLIC changes
+
+ When we stop and start an instance the private ip doesn't change
+
+ curl http://169.254.169.254/latest/meta-data
+
+ curl ifconfig.co 
+   or
+ curl ifconfig.me
+
+ VOLUME:
+  xvda1 202:1    0  11G  0 part /
+
+   The OPERATING system boot from the root file system 
+     / 
+/bin  /home  /opt  /etc 
+
+ Jenkins Server 
+  12  /var/lib/jenkins 
+
+  sudo mount /dev/xvdf /data
+
+  sudo mount /dev/xvdf /var/lib/jenkins 
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+
+    1  clear
+    2  curl http://169.254.169.254/latest/meta-data
+    3  curl http://169.254.169.254/latest/meta-data/ami-id
+    4  curl http://169.254.169.254/latest/meta-data/ami-id/hostname
+    5  curl http://169.254.169.254/latest/meta-data/ami-id/local-hostname
+    6  clear
+    7  curl http://169.254.169.254/latest/meta-data/ami-id/
+    8  curl http://169.254.169.254/latest/meta-data/local-hostname
+    9  curl http://169.254.169.254/latest/meta-data
+   10  curl ifconfig.me
+   11  curl ifconfig.co
+   12  clear
+   13  lsblk'
+   14  lsblk
+   15  df -H
+   16  lsblk
+   17  ls /var/lib/jenkins
+   18  sudo mkdir /var/lib/jenkins
+   19  sudo file -s /dev/xvdf
+   20  sudo mkfs -t xfs /dev/xvdf
+   21  sudo mount /dev/xvdf /var/lib/jenkins
+   22  lsblk
+   23  df -h
+
+ 
+Where will ebs-snapshot be store?
+
+can we modify ebs volume while ib use? 
+
+Can we attach one ebs to multiple ec2? 
+
+can we attached ebs to ec2 in different AZs?
+
+
+sudo dnf install nfs-utils nfs4-acl-tools -y 
+
+services:
+  Servers = ec2, lambda
+  storage = ebs, efs, s3 
+  LoadBalancers 
+  ASG 
+  VPC
+  ROUTE53
+  IAM 
+
+AWS Solutions Architect  =  
+
+storage services:
+  BLOCK Storage  = ebs, 
+  File storage   =  efs, \
+  Object storage =  s3 
+
+BLOCK Storage  = ebs,  
+  Data base backup or 
+  data persistency 
+  volume expansion (20G to 20+G) 
+  Snapshots 
+
+  How to implement data migration 
+  moving data from one az to another
+  disaster recovery 
+
+Create lifecycle policy  - UI
+  Every mid night backup my data bases 
+
+ Lambda FUNCTION
+    It create Snapshots daily and keeps 5 Snapshots 
+    The Snapshots are backup in another aws ACCOUNTS
+    Delete expired Snapshots
+
+  AGE = 30 DAYS 
+
+Lambda FUNCTION:
+    That does volume expansion 
+
+1. Create Snapshots 
+2. create volumes from Snapshots 
+
+Where are Snapshots stored in AWS??
+   S3 Bucket
+
+Recovering ssh private keys:
+  ssh -i key.pem 
+
+  ssh -i "cicd.pem" ec2-user@54.161.211.233
+
+  ssh -i cicd.pem ec2-user@54.161.211.233
+
+  ssh ec2-user@54.161.211.233
+
+File storage   =  :
+  Amazon efs is regional service 
+    Scalable, elastic, cloud-native NFS file system
+  NFS 
+  SAMBA
+
+  sudo dnf install nfs-utils nfs4-acl-tools -y 
+  sudo yum install nfs-utils nfs4-acl-tools -y 
+
+
+      build server
+      jenkins servere 
+      appServer 
+=====================================
+Object storage =  s3 
+  images and 
+  videos
+  logs  for your website
+  Snapshots 
+
+Maximum Object size for s3 = 5000GB (5TB) 
+
+list.txt:
+  simon
+  paul 
+  mary 
+  olu 
+snapshot2
+
+list.txt:
+  simon
+  paul 
+  mary 
+  olu 
+snapshot2
+
+list.txt:
+  simon
+  paul 
+  mary 
+  olu 
+snapshot2
+
+EBS  = Elastic Block Storage = RW0 :
+  Block storage can't shared data with mulitple servers at once
+  FAST
+  CHEAP
+  DATA Must be mounted 
+  We can't access data without mounting
+  Maximum capacity = 16000GB = 16TB
+      MC<=16TB
+    Maximum capacity root volume is 1023GB
+  WRO
+
+EFS   = File Storage: = RWX
+  Maximum capacity = x > 1GB 
+  READ  = FASTER
+  WRITE = SLOW
+  mounting required
+  Can be shared/mounted with multiple servers
+
+S3  = object storage = we can r/w from anywhere without mounting
+  Charges depends on data size, transfer and storage class 
+  Stores: 900TB = 900,000GB
+    Standard   = 25,000$/MONTH * 1000   120 DAYS
+    IA         = 15,000$/month          120 DAYS  
+    RRS        =  5,000$/MONTH           80 DAYS
+    Glacier    =  1,000$/MONTH          360 DAYS
+
+  without mounting you can access data
+  each object in S3 will have a unigue end point to access
+
+ S3 is A regional service 
+    us-east-1 = NV 
+    us-east-2 = Ohio 
+    us-west-1 = CA 
+    us-WEST-2 = oregon   
+ s3 bucket name must be globally unigue accross aws 
+    test 
+security:
+   Block Public Access settings for this bucket
+   Access control list  = ACL 
+versioning:
+  enabled 
+  logs 
+
+

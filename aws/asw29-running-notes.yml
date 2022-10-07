@@ -1,0 +1,139 @@
+ISP = Internet Service Provider
+PSP = Phone Service producers  
+CSP = Cloud Service Provider :
+   aws = amazon web services   
+   microsoft azure  
+   GCP = google cloud platform  
+   ibm  
+   VMWare Cloud  
+   alibaba
+
+   dcs = dominion cloud services  : 
+   MLS = morfaw cloud services
+       
+Cloud Service Provider provide cloud Computing services on demand:
+   cloud Computing services includes:
+      servers  
+      databases  
+      storage  
+      networking
+      web hosting
+      applications hosting
+      virtualization
+      monitoring
+      backup
+      Data Analytics
+      security 
+      auditing  
+      ticketing, scheduling, systems management and auditing
+      Paas, Iaas, SaaS  
+
+CSP: aws, azure, gcp, etc.   
+     apple       samsung  
+     13promax    s22ultra
+     14promax    note22ultra         
+
+           aws           azure                gcp  
+servers   ec2instance  VirtualMachines        vm   
+
+                          EC2---:
+  Basic Computer  vs      aws-EC2 :
+
+  OS     ----            AMI [amazon Machine image] (OS + Additional Softwares)
+     Redhat8/
+  Hard Drive             EBS (Elastic Block Store)\
+  RAM                    RAM
+
+  CPUs[2, 4, 16 core]    Instance type[t2.mirco, t2.medium]
+
+  Network CARD           IP Addressing 
+
+  Firewall               Security Groups
+
+Laptop:
+  i3, 16GB and 4 processors, 1000GB SSD  
+  i3, 8GB and 2 processors, 256GB SSD 
+
+  i5, 16GB and 4 processors, 1000GB SSD  
+  i5, 8GB and 2 processors, 256GB SSD 
+
+  i7, 8GB and 2 processors, 256GB SSD 
+  i9, 
+
+Device name SimonLegah
+Processor Intel(R) Core(TM) i9-10885H CPU @ 2.40GHz   2.40 GHz
+
+Installed RAM 32.0 GB (31.7 GB usable)
+Device ID 66C2D1E4-51DC-48C1-B52E-62FA89D71094
+Product ID  00330-53430-41519-AAOEM
+System type 64-bit operating system, x64-based processor
+Pen and touch No pen or touch input is available for this display
+
+8GB  
+
+=========================
+
+Amazon Machine Image (AMI):
+  1. MY AMI = Golden AMIs  
+        Instance summary for 
+        i-0859bda0d6e112357 
+        TAG = Jenkins
+        AMI = Redhat8 + openJDK11+ + jenkins + GIT + PLUGINS  
+
+  2. community = OS only   
+       OS  
+
+  3. marketplace  = 
+       OS + Softwares  
+       os + splunk 
+       os + vpn    
+
+User data:
+  This is script that can run certain tasks while creating the instance  
+ 
+ #!/bin/bash
+ sudo useradd simon  
+ sudo yum install httpd -y 
+ sudo systemctl start httpd
+ sudo systemctl enable httpd 
+ sudo echo "DevOps is good" >> /var/www/html/index.html 
+ sudo echo "<h1>Welcome To LandmarkTech</h1>" >> /var/www/html/index.html
+     
+                  The same vpc/network          
+                webserver1     webserver2          myLaptop  
+public-ip  =  3.85.228.234     34.203.191.140      99.233.53.63  curl ifconfig.co 
+              44.201.201.78
+
+private-ip = 172.31.82.198     172.31.90.63        10.0.0.15     ip a / ipconfig  
+
+elastic-ip = 3.215.19.106
+
+myLaptop:
+  ssh ec2-user@172.31.90.63  will not work because the are in d/f vpcs   
+webserver2:
+  ssh ec2-user@172.31.82.198 
+
+
+    18.234.62.6      172.31.27.198
+RDP = 
+S=?KS9&yAJ&ztp%e3.=agvLzTMDBTOj)
+
+
+SONARQUBE:
+   http://54.176.76.14:9000/    
+Nexus  
+   http://52.53.227.31:8191/landmark/repository/tesla-snapshots/   
+   http://52.53.227.31:8191/landmark/repository/tesla-releases/
+Jenkins  
+Tomcat
+  http://35.170.249.131:8080/tesla/   
+
+  http://35.170.249.131:8080/tesla/services/employee/getEmployeeDetails  
+
+  http://35.170.249.131:8080/tesla/services/employee/putEmployeeDetails 
+
+  https://boa.com/services/employee/putEmployeeDetails
+
+50 restfulAPI:
+
+restfulAPI:
