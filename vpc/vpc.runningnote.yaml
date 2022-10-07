@@ -1,0 +1,131 @@
+AWS RUNNING NOTES: April 4, 2022.
+BOA:
+  Access all departments - VPC 
+      payroll - Subnet 
+      accounts - Subnet
+      logistics - Subnet
+      customer service - Subnet
+
+  Offices - VPC  10.10.0.0/24
+      MD - Subnet 
+         200 ec2-instances [200 ips ] 
+      TX - Subnet
+         210 ec2-instances [210 ips ] 
+      NY - Subnet
+         500 ec2-instances [500 ips ] 
+      GA  - Subnet
+         180 ec2-instances [180 ips ] 
+ip Addresses = 200 + 210 + 180 + 500 = 1090
+
+What resources / services can hace we created in AWS 
+   ec2-instances 
+Infrastructure planning meeting:
+CIDR block 
+  vpc :
+       8  8 8 8 = 32bites 
+      10.10.0.0/n where n [16,17,18,...32]
+      172.10.0.0/n
+      10.10.0.0/16 
+      no of resources = 2^32-n 
+  cidr block     n      32-n      no Resources 
+  10.10.0.0/16   16  [32-16] 16   2^16 = 65536
+  10.10.0.0/20   20  [32-20] 12   2^12 = 4096
+  10.10.0.0/24   24  [32-24] 8    2^8  = 256
+  10.10.0.0/32   28  [32-32] 0    2^0  = 1
+
+ipv-4  = 32 bites
+   no of resources = 2^32-n 
+ipv-6  = 128 bites 
+   no of resources = 2^128-n 
+   if n = 16, resources = 2^128-16 = 2^112
+2001:4860:4860::8888
+
+vpc27 cidr   = 172.0.0.0/20   = 4096/256  = 16
+   privateSN = 172.0.0.0/24   
+      172.0.0.0, 172.0.0.1, ..., 172.0.0.255 --- 256 
+   PublicSN  = 172.0.1.0/24   
+      172.0.1.0, 172.0.1.1, ... 172.0.1.255
+
+ 10.10.0.0/24 
+
+dbServer:
+  ssh -i "2022key.pem" ec2-user@172.0.0.184
+webserver: 
+  from External network:
+    ssh -i "2022key.pem" ec2-user@18.234.106.128
+  from internal network:
+    ssh -i "2022key.pem" ec2-user@172.0.1.194
+
+
+ping google.com
+icmp 
+ssh 
+
+
+VPC --- 256 resources (IP Addresses) 
+      10.0.0.0/24 
+  Subnets 
+    Subnet1 --- 64 resources
+       10.0.0.0/26  [.0, .1,... .63 ]
+    Subnet2 --- 128 resources
+       10.0.0.64/25 
+    Subnet3 --- 256 - 64 -128 = 64 resources
+       10.0.0.192/26 
+
+VPC --- > 
+   private 
+   public
+
+privateIP
+
+publicIP
+
+EC2-INSTANCES 
+     AWS Global Resources 
+          IAM 
+    Regional Resources
+         VPC = us-east-1 = NV 
+         s3  
+         EFS 
+
+  availability zones resources[DATACENTERS]
+         Subnets - us-east-1a
+         ec2-instances
+         EBS 
+
+VPC PEERING CONNECTION:
+   Intra region VPC PEERING CONNECTION
+      us-east-1 = NV 
+         vpc1 --- accounts 
+         vpc2 --- customers service 
+   Inter region VPC PEERING CONNECTION
+           us-east-1 = NV 
+              vpc1 --- accounts 
+           us-east-2 = OH 
+              vpc2 --- customers service 
+
+Avoid cidr block overlapping 
+   vpc27a = 10.0.0.0/24
+      dbServer = 10.0.0.25
+   vpc27c = 10.0.0.0/24
+      appServer = 10.0.0.25
+
+   vpc27a = 10.0.0.0/24
+      10.0.0.29
+      54.92.197.158
+   vpc27b = 172.0.0.0/20 
+      webserver:
+         ssh -i key.pem ec2-user@10.0.0.29
+         ssh -i key.pem ec2-user@54.92.197.158
+  Firewall 
+1. vpc27b Request/Create a peering request to vpc27a 
+2. vpc27a accept the request 
+3. Edit the routes (route tables)
+
+#!/bin/bash
+sudo yum install httpd -y  
+sudo service httpd start  
+sudo chkconfig httpd on
+sudo echo "This is my web server" > /var/www/html/index.html  
+echo successful
+
