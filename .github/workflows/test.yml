@@ -3,7 +3,6 @@ name: test project
 on:
   pull_request:
   
-  branche:
       - master
 
       jobs:
