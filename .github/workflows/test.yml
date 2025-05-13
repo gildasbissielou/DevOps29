@@ -2,7 +2,7 @@ name: test project
 
 on:
   pull_request:
-    branches:
+    branche:
       - master
 
       jobs:
