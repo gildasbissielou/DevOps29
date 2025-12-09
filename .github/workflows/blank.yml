@@ -1,0 +1,43 @@
+name: SoapUI tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  soapui:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt' # or 'azul' / 'temurin'
+          java-version: '11'
+
+      - name: Download SoapUI Open-Source
+        run: |
+          curl -L -o soapui.zip https://sourceforge.net/projects/soapui/files/5.6.0/SoapUI-5.6.0-linux-bin.zip/download
+          unzip -o soapui.zip -d soapui
+
+      - name: Run SoapUI tests
+        env:
+          PROJECT_FILE: 'path/to/YourProject.xml'       # update path
+          REPORT_DIR: 'soapui-reports'
+        run: |
+          mkdir -p "$REPORT_DIR"
+          ./soapui/bin/testrunner.sh -s"TestSuiteName" -c"TestCaseName" -j -f "$REPORT_DIR" "$PROJECT_FILE"
+
+      - name: Archive test results
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: soapui-reports
+          path: soapui-reports
+
