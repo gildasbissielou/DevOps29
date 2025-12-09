@@ -22,6 +22,7 @@ jobs:
           java-version: '11'
 
       - name: Download SoapUI Open-Source
+        if: false
         run: |
           curl -L -o soapui.zip https://sourceforge.net/projects/soapui/files/5.6.0/SoapUI-5.6.0-linux-bin.zip/download
           unzip -o soapui.zip -d soapui
