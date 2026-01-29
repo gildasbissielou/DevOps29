@@ -39,6 +39,7 @@ jobs:
         if: success()
         uses: actions/upload-artifact@v4
         with:
-          name: soapui-reports
-          path: soapui-reports
+        
+         name: soapui-reports
+         path: soapui-reports
 
